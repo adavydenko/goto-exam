@@ -9,6 +9,8 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { QuestionListComponent } from './question-list/question-list.component';
 
+import { QuestionService } from "./services";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { QuestionListComponent } from './question-list/question-list.component';
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
-  providers: [],
+  providers: [
+    QuestionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

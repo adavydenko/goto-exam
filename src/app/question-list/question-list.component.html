@@ -1,3 +1,10 @@
 <p>
   question-list works!
 </p>
+
+<ol class="questions">
+    <li *ngFor="let q of questions">
+        <p>{{q.title}}</p>
+        <button (click)="deleteQuestion(q)">X</button>
+    </li>
+</ol>

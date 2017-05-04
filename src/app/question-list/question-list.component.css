@@ -1,0 +1,35 @@
+/* Original idea: https://www.lynda.com/CSS-tutorials/Add-style-formatting-new-HTML-markup/ */
+
+ol.questions {
+    list-style-type: none;
+    margin: 0 0 0 30px;
+}
+
+ol.questions li {
+    counter-increment: myCounter;
+    margin: 0 0 45px 0;
+    padding: 13px 0 0 65px;
+    position: relative;
+}
+
+ol.questions li::before {
+    content: counter(myCounter, decimal-leading-zero);
+    display: inline-block;
+    text-align: center;
+    font-size: 4em;
+    line-height: 1.3 em;
+    background-color: hsl(0, 0%, 25%);
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    padding: 10px;
+    position: absolute;
+    top: 0; left: -40px;
+    border-radius: 5px;
+}
+
+ol.questions li p {
+    display: block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: hsl(0, 0%, 15%);
+}

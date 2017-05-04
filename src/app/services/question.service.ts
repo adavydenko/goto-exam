@@ -7,7 +7,7 @@ import { Question } from "./../models";
 @Injectable()
 export class QuestionService {
 
-  private apiUrl = 'http://localhost:3030/questions/';
+  private apiUrl = 'http://localhost:3000/questions/';
 
   constructor(private http: Http) { }
 
